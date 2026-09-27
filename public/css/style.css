@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #14201d;
+  color: #1f2a26;
+  font-family: "IBM Plex Mono", monospace;
+  overflow: hidden;
+}
+
+#scene {
+  position: fixed;
+  inset: 0;
+  display: block;
+}
+
+.panel {
+  position: fixed;
+  z-index: 2;
+  background: #ece3cf;
+  border: 1px solid #ddd2b6;
+  box-shadow: 0 2px 0 rgba(20, 32, 29, 0.4);
+}
+
+#field-notes {
+  top: 20px;
+  left: 20px;
+  max-width: 300px;
+  padding: 18px 20px;
+}
+
+#field-notes-toggle {
+  all: unset;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: #7c9070;
+  border-bottom: 1px solid #7c9070;
+  padding-bottom: 2px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+#field-notes h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0 0 8px;
+  color: #1f2a26;
+}
+
+#field-notes p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+#field-notes dl {
+  margin: 0 0 12px;
+  border-top: 1px solid #ddd2b6;
+  padding-top: 10px;
+}
+
+#field-notes dl > div {
+  display: flex;
+  gap: 10px;
+  padding: 3px 0;
+  font-size: 12px;
+}
+
+#field-notes dt {
+  color: #b3552f;
+  min-width: 72px;
+}
+
+#field-notes dd {
+  margin: 0;
+  color: #1f2a26;
+}
+
+#field-notes .hint {
+  font-size: 11px;
+  color: #7c9070;
+  margin: 0;
+}
+
+#field-notes.collapsed #field-notes-body {
+  display: none;
+}
+
+#controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 260px;
+}

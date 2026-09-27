@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terrain Sculptor</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+        "tweakpane": "https://cdn.jsdelivr.net/npm/tweakpane@4.0.3/dist/tweakpane.min.js",
+        "simplex-noise": "https://cdn.jsdelivr.net/npm/simplex-noise@4.0.3/+esm",
+        "alea": "https://cdn.jsdelivr.net/npm/alea@1.0.1/+esm"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <section id="field-notes" class="panel">
+    <button id="field-notes-toggle" aria-expanded="true" aria-controls="field-notes-body">
+      Notes
+    </button>
+    <div id="field-notes-body">
+      <h1>Terrain Sculptor</h1>
+      <dl>
+        <div><dt>Frequency</dt><dd>size of the terrain features</dd></div>
+        <div><dt>Elevation</dt><dd>how tall the peaks rise</dd></div>
+        <div><dt>Octaves</dt><dd>layers of fine detail added on top</dd></div>
+        <div><dt>Smoothing</dt><dd>passes that soften sharp edges</dd></div>
+        <div><dt>Seed</dt><dd>generates a new terrain layout</dd></div>
+      </dl>
+      <p class="hint">Drag to orbit the camera. Scroll to zoom.</p>
+    </div>
+  </section>
+
+  <div id="controls"></div>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
